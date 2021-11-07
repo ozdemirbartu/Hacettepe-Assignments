@@ -1,0 +1,16 @@
+#Final Position Calculator
+#26.10.2019
+#written by b21986229
+0 read r1             #enter the fallingTime
+1 read r2             #enter the initialPosition of the object
+2 read r3             #enter the initialVelocity of the object
+3 setn r4 -10         #gravity constant
+4 setn r5 2           #we are going to need it to use it in the equation
+5 mul r6 r1 r4        #the multiplication of gravity constant and fallingTime
+6 mul r6 r1 r6        #the multiplication of gravity constant with the last outcome
+7 div r6 r6 r5        #dividing the last outcome by 2
+8 mul r7 r1 r3        #multiplication of the fallingTime and initialVelocity
+9 add r8 r7 r6        #addition of the 2 outcome that we found earlier
+10 add r8 r8 r2       #now we have added the last result and initialPosition now, we got the final position
+11 write r8           #print final position of the object
+12 halt               #we are done.
